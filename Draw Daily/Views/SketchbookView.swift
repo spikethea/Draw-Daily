@@ -52,7 +52,7 @@ struct SketchbookView: View {
             List {
                 HStack {
                     Spacer()
-                    Text("Sketches so far: 3")
+                    Text("Sketches so far: \(orders.count)")
                         .fontWeight(.bold)
                         .padding(6)
                     Spacer()
@@ -61,8 +61,13 @@ struct SketchbookView: View {
 
                                 
                                     ForEach(orders, id: \.self, content: { drawing in
-                                        Image(uiImage: UIImage(data: drawing.img!)!)
-                                        Text(drawing.date ?? "Unknown")
+                                        VStack{
+                                            Text(drawing.date ?? "Unknown")
+                                            Image(uiImage: UIImage(data: drawing.img!)!)
+                                                .resizable()
+                                                .frame(height: 200)
+                                        }
+                                        
                                         
                                     })
                                 

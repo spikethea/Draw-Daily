@@ -89,7 +89,7 @@ struct CameraView: View {
         let formattedDate = format.string(from: date)
         
         drawing.img = pickedImage
-        drawing.date = "Sun 2 May"
+        drawing.date = formattedDate
         print(pickedImage!)
         
         do {
