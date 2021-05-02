@@ -1,0 +1,20 @@
+[
+    {
+        "typename": "shading",
+        "id": 0,
+        "title": "How to do simple shading",
+        "steps": [
+        "First, find where you could imagine where less kight is",
+        "find the darkest corner, and start sketching diagonal lines from there",
+        ]
+    },
+    {
+        "typename": "crosshatching",
+        "id": 1,
+        "title": "How to cross-hatching",
+        "steps": [
+        "First, find where you could imagine where less kight is",
+        "find the darkest corner, and start sketching diagonal lines from there",
+        ]
+    },
+]

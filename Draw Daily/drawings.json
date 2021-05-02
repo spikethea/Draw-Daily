@@ -1,0 +1,53 @@
+[
+    {
+        "name": "anime",
+        "id": 0,
+        "difficulty": {
+            "easy": "outlines",
+            "intermediate": "simple shading and outlines",
+            "hard": "highlights and shading",
+            "expert": "realistic highlights and shading",
+            
+        },
+        "tips": {
+            "easy": "outlines",
+            "intermediate": "shading",
+            "hard": "highlights",
+            "expert": "realistic",
+        }
+    },
+    {
+        "name": "forest",
+        "id": 1,
+        "difficulty": {
+            "easy": "outlines",
+            "intermediate": "simple shading and outlines",
+            "hard": "highlights and shading",
+            "expert": "realistic highlights and shading",
+            
+        },
+        "tips": {
+            "easy": "outlines",
+            "intermediate": "shading",
+            "hard": "highlights",
+            "expert": "realistic",
+        }
+    },
+    {
+        "name": "dragon",
+        "id": 2,
+        "difficulty": {
+            "easy": "outlines",
+            "intermediate": "simple shading and outlines",
+            "hard": "highlights and shading",
+            "expert": "realistic highlights and shading",
+            
+        },
+        "tips": {
+            "easy": "outlines",
+            "intermediate": "shading",
+            "hard": "highlights",
+            "expert": "realistic",
+        }
+    },
+]

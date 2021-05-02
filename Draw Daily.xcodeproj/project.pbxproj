@@ -3,23 +3,62 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D506E9D7261C96B8006D659A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506E9D6261C96B8006D659A /* HomeView.swift */; };
+		D506E9DA261C9849006D659A /* MoodboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506E9D9261C9849006D659A /* MoodboardView.swift */; };
+		D506E9DF261CBDDB006D659A /* SketchbookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506E9DE261CBDDB006D659A /* SketchbookView.swift */; };
+		D506E9E6261CC63D006D659A /* GenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506E9E5261CC63D006D659A /* GenerateView.swift */; };
+		D506E9E9261CD094006D659A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506E9E8261CD094006D659A /* CameraView.swift */; };
+		D506E9EC261CD95B006D659A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506E9EB261CD95B006D659A /* ImagePicker.swift */; };
+		D52F4E6D260AABB60068267E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D52F4E6C260AABB60068267E /* SDWebImageSwiftUI */; };
+		D52F4E79260D56380068267E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F4E78260D56380068267E /* Result.swift */; };
+		D52F4E7D260D59720068267E /* SearchObjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F4E7C260D59720068267E /* SearchObjectController.swift */; };
 		D55133152608FA1E001EF90D /* Draw_DailyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55133142608FA1E001EF90D /* Draw_DailyApp.swift */; };
 		D55133172608FA1E001EF90D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55133162608FA1E001EF90D /* ContentView.swift */; };
 		D55133192608FA1F001EF90D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55133182608FA1F001EF90D /* Assets.xcassets */; };
 		D551331C2608FA1F001EF90D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D551331B2608FA1F001EF90D /* Preview Assets.xcassets */; };
+		D5889E18262A3D2D008298F6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5889E17262A3D2D008298F6 /* Persistence.swift */; };
+		D5889E21262A651B008298F6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5889E20262A651B008298F6 /* Colors.xcassets */; };
+		D5BC518C263D22FE00A4E2AD /* drawings.json in Resources */ = {isa = PBXBuildFile; fileRef = D5BC518B263D22FE00A4E2AD /* drawings.json */; };
+		D5BC518F263D26CD00A4E2AD /* DrawingEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BC518E263D26CD00A4E2AD /* DrawingEntry.swift */; };
+		D5BC5192263D287F00A4E2AD /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BC5191263D287F00A4E2AD /* Bundle-Decodable.swift */; };
+		D5BC5197263D354500A4E2AD /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BC5196263D354500A4E2AD /* TipsView.swift */; };
+		D5BC519A263D3AA800A4E2AD /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BC5199263D3AA800A4E2AD /* TipView.swift */; };
+		D5BC519D263D6D0A00A4E2AD /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = D5BC519C263D6D0A00A4E2AD /* tips.json */; };
+		D5BC51A0263D6E3800A4E2AD /* TipEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BC519F263D6E3800A4E2AD /* TipEntry.swift */; };
+		D5BC51A8263D889B00A4E2AD /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BC51A7263D889B00A4E2AD /* ColorManager.swift */; };
+		D5F2D193262A03B10016DCF2 /* DrawDaily.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5F2D191262A03B10016DCF2 /* DrawDaily.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D506E9D6261C96B8006D659A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D506E9D9261C9849006D659A /* MoodboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardView.swift; sourceTree = "<group>"; };
+		D506E9DE261CBDDB006D659A /* SketchbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchbookView.swift; sourceTree = "<group>"; };
+		D506E9E5261CC63D006D659A /* GenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateView.swift; sourceTree = "<group>"; };
+		D506E9E8261CD094006D659A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		D506E9EB261CD95B006D659A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D52F4E78260D56380068267E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D52F4E7C260D59720068267E /* SearchObjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchObjectController.swift; sourceTree = "<group>"; };
 		D55133112608FA1E001EF90D /* Draw Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Draw Daily.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55133142608FA1E001EF90D /* Draw_DailyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw_DailyApp.swift; sourceTree = "<group>"; };
 		D55133162608FA1E001EF90D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D55133182608FA1F001EF90D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D551331B2608FA1F001EF90D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D551331D2608FA1F001EF90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5889E17262A3D2D008298F6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D5889E20262A651B008298F6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D5BC518B263D22FE00A4E2AD /* drawings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = drawings.json; sourceTree = "<group>"; };
+		D5BC518E263D26CD00A4E2AD /* DrawingEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingEntry.swift; sourceTree = "<group>"; };
+		D5BC5191263D287F00A4E2AD /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		D5BC5196263D354500A4E2AD /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
+		D5BC5199263D3AA800A4E2AD /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		D5BC519C263D6D0A00A4E2AD /* tips.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tips.json; sourceTree = "<group>"; };
+		D5BC519F263D6E3800A4E2AD /* TipEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipEntry.swift; sourceTree = "<group>"; };
+		D5BC51A7263D889B00A4E2AD /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		D5F2D192262A03B10016DCF2 /* DrawDaily.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrawDaily.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,15 +66,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D52F4E6D260AABB60068267E /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D52F4E72260D548C0068267E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D52F4E78260D56380068267E /* Result.swift */,
+				D5BC518E263D26CD00A4E2AD /* DrawingEntry.swift */,
+				D5BC519F263D6E3800A4E2AD /* TipEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D52F4E73260D54980068267E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D55133162608FA1E001EF90D /* ContentView.swift */,
+				D506E9D6261C96B8006D659A /* HomeView.swift */,
+				D506E9D9261C9849006D659A /* MoodboardView.swift */,
+				D506E9DE261CBDDB006D659A /* SketchbookView.swift */,
+				D506E9E5261CC63D006D659A /* GenerateView.swift */,
+				D506E9E8261CD094006D659A /* CameraView.swift */,
+				D5BC5196263D354500A4E2AD /* TipsView.swift */,
+				D5BC5199263D3AA800A4E2AD /* TipView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D52F4E7B260D59510068267E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D52F4E7C260D59720068267E /* SearchObjectController.swift */,
+				D506E9EB261CD95B006D659A /* ImagePicker.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		D55133082608FA1E001EF90D = {
 			isa = PBXGroup;
 			children = (
+				D5BC51A7263D889B00A4E2AD /* ColorManager.swift */,
+				D5889E20262A651B008298F6 /* Colors.xcassets */,
+				D5BC5191263D287F00A4E2AD /* Bundle-Decodable.swift */,
+				D5F2D191262A03B10016DCF2 /* DrawDaily.xcdatamodeld */,
 				D55133132608FA1E001EF90D /* Draw Daily */,
 				D55133122608FA1E001EF90D /* Products */,
 			);
@@ -52,11 +130,16 @@
 		D55133132608FA1E001EF90D /* Draw Daily */ = {
 			isa = PBXGroup;
 			children = (
+				D52F4E7B260D59510068267E /* Controllers */,
+				D52F4E73260D54980068267E /* Views */,
+				D52F4E72260D548C0068267E /* Models */,
 				D55133142608FA1E001EF90D /* Draw_DailyApp.swift */,
-				D55133162608FA1E001EF90D /* ContentView.swift */,
 				D55133182608FA1F001EF90D /* Assets.xcassets */,
 				D551331D2608FA1F001EF90D /* Info.plist */,
 				D551331A2608FA1F001EF90D /* Preview Content */,
+				D5889E17262A3D2D008298F6 /* Persistence.swift */,
+				D5BC519C263D6D0A00A4E2AD /* tips.json */,
+				D5BC518B263D22FE00A4E2AD /* drawings.json */,
 			);
 			path = "Draw Daily";
 			sourceTree = "<group>";
@@ -85,6 +168,9 @@
 			dependencies = (
 			);
 			name = "Draw Daily";
+			packageProductDependencies = (
+				D52F4E6C260AABB60068267E /* SDWebImageSwiftUI */,
+			);
 			productName = "Draw Daily";
 			productReference = D55133112608FA1E001EF90D /* Draw Daily.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +198,9 @@
 				Base,
 			);
 			mainGroup = D55133082608FA1E001EF90D;
+			packageReferences = (
+				D52F4E6B260AABB60068267E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = D55133122608FA1E001EF90D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +215,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BC518C263D22FE00A4E2AD /* drawings.json in Resources */,
+				D5889E21262A651B008298F6 /* Colors.xcassets in Resources */,
+				D5BC519D263D6D0A00A4E2AD /* tips.json in Resources */,
 				D551331C2608FA1F001EF90D /* Preview Assets.xcassets in Resources */,
 				D55133192608FA1F001EF90D /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +230,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BC519A263D3AA800A4E2AD /* TipView.swift in Sources */,
+				D5BC5197263D354500A4E2AD /* TipsView.swift in Sources */,
 				D55133172608FA1E001EF90D /* ContentView.swift in Sources */,
+				D52F4E7D260D59720068267E /* SearchObjectController.swift in Sources */,
+				D5BC51A0263D6E3800A4E2AD /* TipEntry.swift in Sources */,
+				D5BC518F263D26CD00A4E2AD /* DrawingEntry.swift in Sources */,
+				D5F2D193262A03B10016DCF2 /* DrawDaily.xcdatamodeld in Sources */,
+				D506E9DF261CBDDB006D659A /* SketchbookView.swift in Sources */,
+				D5BC5192263D287F00A4E2AD /* Bundle-Decodable.swift in Sources */,
+				D506E9E9261CD094006D659A /* CameraView.swift in Sources */,
+				D506E9E6261CC63D006D659A /* GenerateView.swift in Sources */,
+				D506E9D7261C96B8006D659A /* HomeView.swift in Sources */,
+				D52F4E79260D56380068267E /* Result.swift in Sources */,
+				D506E9EC261CD95B006D659A /* ImagePicker.swift in Sources */,
+				D5889E18262A3D2D008298F6 /* Persistence.swift in Sources */,
+				D5BC51A8263D889B00A4E2AD /* ColorManager.swift in Sources */,
+				D506E9DA261C9849006D659A /* MoodboardView.swift in Sources */,
 				D55133152608FA1E001EF90D /* Draw_DailyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Draw Daily/Preview Content\"";
+				DEVELOPMENT_TEAM = BK9BCP76Y7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Draw Daily/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -290,6 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Draw Daily/Preview Content\"";
+				DEVELOPMENT_TEAM = BK9BCP76Y7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Draw Daily/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -326,6 +436,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D52F4E6B260AABB60068267E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D52F4E6C260AABB60068267E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D52F4E6B260AABB60068267E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D5F2D191262A03B10016DCF2 /* DrawDaily.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D5F2D192262A03B10016DCF2 /* DrawDaily.xcdatamodel */,
+			);
+			currentVersion = D5F2D192262A03B10016DCF2 /* DrawDaily.xcdatamodel */;
+			path = DrawDaily.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D55133092608FA1E001EF90D /* Project object */;
 }
