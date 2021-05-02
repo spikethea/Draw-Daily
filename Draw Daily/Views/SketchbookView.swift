@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import UIKit
+import SDWebImageSwiftUI
 
 struct SketchbookView: View {
     
@@ -39,8 +40,6 @@ struct SketchbookView: View {
     )
     var orders: FetchedResults<Drawing>
     
-
-    
     var body: some View {
         
         let columns = [
@@ -62,6 +61,7 @@ struct SketchbookView: View {
 
                                 
                                     ForEach(orders, id: \.self, content: { drawing in
+                                        Image(uiImage: UIImage(data: drawing.img!)!)
                                         Text(drawing.date ?? "Unknown")
                                         
                                     })

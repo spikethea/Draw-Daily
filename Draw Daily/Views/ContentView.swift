@@ -18,7 +18,8 @@ struct ContentView: View {
     
     @FetchRequest(entity: Drawing.entity(),
                   sortDescriptors: [
-                    NSSortDescriptor(keyPath: \Drawing.img, ascending: true), //NSSortDescriptor(keyPath: \Drawing.date, ascending: true)
+                    //NSSortDescriptor(keyPath: \Drawing.img, ascending: true),
+                    NSSortDescriptor(keyPath: \Drawing.date, ascending: true)
                   ]
     )
     var orders: FetchedResults<Drawing>
