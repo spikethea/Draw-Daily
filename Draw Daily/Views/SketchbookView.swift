@@ -28,7 +28,7 @@ struct SketchbookView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(entity: Drawing.entity(),
                   sortDescriptors: [
-                    NSSortDescriptor(keyPath: \Drawing.date, ascending: true)
+                    NSSortDescriptor(keyPath: \Drawing.date, ascending: false)
                   ]
     )
     var orders: FetchedResults<Drawing>
