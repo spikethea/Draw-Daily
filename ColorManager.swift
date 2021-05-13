@@ -10,8 +10,12 @@ import SwiftUI
 
 extension Color {
     
+    static let BackgroundColor = Color("BackgroundColor")
+    static let newPrimaryColor = Color("PrimaryColor")
+    static let lightColor = Color("LightColor")
+    static let textColor = Color("TextColor")
     
-    static let newPrimaryColor = Color("BackgroundColor")
-    
+    static let lightGray = Color("LightGray")
+    static let tipColor = Color("TipColor")
     
 }

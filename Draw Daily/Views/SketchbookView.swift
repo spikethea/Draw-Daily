@@ -11,17 +11,9 @@ import UIKit
 import SDWebImageSwiftUI
 
 struct SketchbookView: View {
-    
 
     @EnvironmentObject var searchObjectController: SearchObjectController
-//
-//    @FetchRequest(entity: Drawing.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Drawing.img, ascending: true)])
-//
-//    var orders: FetchedResults<Drawing>
-//
-//
-//
-    @State var showOrderSheet = false
+
     
     init() {
             UINavigationBar.appearance().backgroundColor = UIColor(red: 115 / 255, green: 93 / 255, blue: 120 / 255, alpha: 1)
@@ -33,12 +25,14 @@ struct SketchbookView: View {
         //print(orders)
         }
     
+    @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(entity: Drawing.entity(),
                   sortDescriptors: [
                     NSSortDescriptor(keyPath: \Drawing.date, ascending: true)
                   ]
     )
     var orders: FetchedResults<Drawing>
+    
     
     var body: some View {
         
@@ -47,9 +41,11 @@ struct SketchbookView: View {
             GridItem(.adaptive(minimum: 80))
         ]
     
+    
                     
         NavigationView {
             List {
+
                 HStack {
                     Spacer()
                     Text("Sketches so far: \(orders.count)")
@@ -57,48 +53,40 @@ struct SketchbookView: View {
                         .padding(6)
                     Spacer()
                 }
-                LazyVGrid(columns: columns)  {
+                ScrollView {
+                    LazyVGrid(columns: columns)  {
 
+                        ForEach(orders, id: \.self) { drawing in
+                            
+                            VStack{
+                                NavigationLink(destination: ImageView(image: drawing.img, name: drawing.date!, date: drawing.date!)) {
                                 
-                                    ForEach(orders, id: \.self, content: { drawing in
-                                        VStack{
-                                            Text(drawing.date ?? "Unknown")
-                                            Image(uiImage: UIImage(data: drawing.img!)!)
-                                                .resizable()
-                                                .frame(height: 200)
-                                        }
-                                        
-                                        
-                                    })
-                                
-//                    Image("placeholder")
-//                            .resizable()
-//                            .frame(height: 100)
-//                    Image("placeholder")
-//                            .resizable()
-//                            .frame(height: 100)
-//                    Image("placeholder")
-//                        .resizable()
-//                        .frame(height: 100)
-//                    Image("placeholder")
-//                        .resizable()
-//                        .frame(height: 100)
-//                    Image("placeholder")
-//                            .resizable()
-//                            .frame(height: 100)
-//                    Image("placeholder")
-//                            .resizable()
-//                            .frame(height: 100)
-//                    Image("placeholder")
-//                        .resizable()
-//                        .frame(height: 100)
-//                    Image("placeholder")
-//                        .resizable()
-//                        .frame(height: 100)
-                    
+                                Image(uiImage: UIImage(data: drawing.img!)!)
+                                .resizable()
+                                .frame(height: 200)
+                                .overlay(
+                                    VStack {
+                                        Text(drawing.date ?? "Unknown")
+                                            .padding(5)
+                                            .foregroundColor(Color.textColor)
+                                    }
+                                    .background(Color.white)
+                                    .padding(5)
+                                    , alignment: .bottom)
+                                }
+                            }
+                            .border(Color.gray, width: 1)
+                        }
+                        
+                 
+                    }
                 }
                 
-            }.navigationBarTitle("SketchBook")
+            }.toolbar {
+                EditButton()
+            }
+            
+            .navigationBarTitle("SketchBook")
         }
     }
 }

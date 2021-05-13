@@ -14,12 +14,18 @@ struct TipView: View {
     
     var body: some View {
         VStack{
-            Text(tip.typename)
-            Image("placeholder")
-            ForEach(tip.steps, id: \.self, content: { step in
-                Text(step)
-            })
-        }
+            Image(tip.typename)
+                .frame(maxWidth: .infinity, maxHeight: 300)
+                .aspectRatio(contentMode: .fit)
+                .padding(25)
+            List {
+                ForEach(tip.steps, id: \.self, content: { step in
+                    
+                        Text(step)
+                    
+                })
+            }
+        }.navigationTitle(tip.typename)
         
     }
 }

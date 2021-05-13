@@ -1,53 +1,70 @@
 [
     {
-        "name": "anime",
+        "name": "Anime",
         "id": 0,
-        "difficulty": {
-            "easy": "outlines",
-            "intermediate": "simple shading and outlines",
-            "hard": "highlights and shading",
-            "expert": "realistic highlights and shading",
+        "difficulty": [
+            "outlines",
+            "simple shading and outlines",
+            "realistic shading",
+            "realistic shading and perspective",
             
-        },
-        "tips": {
-            "easy": "outlines",
-            "intermediate": "shading",
-            "hard": "highlights",
-            "expert": "realistic",
-        }
+        ],
+        "tips": [
+            3,
+            1,
+            2,
+            4,
+        ]
     },
     {
-        "name": "forest",
+        "name": "Forest",
         "id": 1,
-        "difficulty": {
-            "easy": "outlines",
-            "intermediate": "simple shading and outlines",
-            "hard": "highlights and shading",
-            "expert": "realistic highlights and shading",
+        "difficulty": [
+            "simple shading",
+            "simple shading and accurate outlines",
+            "realistic shading",
+            "highlights and shading",
             
-        },
-        "tips": {
-            "easy": "outlines",
-            "intermediate": "shading",
-            "hard": "highlights",
-            "expert": "realistic",
-        }
+        ],
+        "tips": [
+            0,
+            3,
+            2,
+            5,
+        ]
     },
     {
-        "name": "dragon",
+        "name": "Dragons",
         "id": 2,
-        "difficulty": {
-            "easy": "outlines",
-            "intermediate": "simple shading and outlines",
-            "hard": "highlights and shading",
-            "expert": "realistic highlights and shading",
+        "difficulty": [
+            "outlines",
+            "simple shading and outlines",
+            "realistic shading",
+            "realistic highlights and shading",
             
-        },
-        "tips": {
-            "easy": "outlines",
-            "intermediate": "shading",
-            "hard": "highlights",
-            "expert": "realistic",
-        }
+        ],
+        "tips": [
+            3,
+            1,
+            2,
+            5,
+        ]
+    },
+    {
+        "name": "Apples",
+        "id": 2,
+        "difficulty": [
+            "simple shading",
+            "semi-realistic shading",
+            "realistic shading",
+            "realistic highlights and shading",
+            
+        ],
+        "tips": [
+            0,
+            1,
+            2,
+            5,
+        ]
     },
 ]

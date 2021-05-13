@@ -11,38 +11,49 @@ import SDWebImageSwiftUI
 
 struct MoodboardView: View {
     
+    @EnvironmentObject var settings: AppSettings
     @EnvironmentObject var searchObjectController: SearchObjectController
     
     var body: some View {
+        VStack {
         
 //        let columns = [
 //            GridItem(.adaptive(minimum: 80)),
 //            GridItem(.adaptive(minimum: 80))
 //        ]
-        
-        List {
-            ForEach(searchObjectController.results, id: \.id, content: { result in
+            if (settings.started) {
                 Text("Mood Board: \(searchObjectController.searchText)")
                     .fontWeight(.bold)
                     .padding(6)
-
-                    
-                        VStack {
-                            WebImage(url: URL(string: result.urls.small) )
-                                .resizable()
-                                .frame(height:300)
-                                
-                        }
+                List {
+                    ForEach(searchObjectController.results, id: \.id, content: { result in
                         
-                    })
-            
-            }.onAppear() {
-                searchObjectController.search()
+
+                        NavigationLink(destination: MoodboardImageView(result: result, topic: searchObjectController.searchText)) {
+                                WebImage(url: URL(string: result.urls.small) )
+                                    .resizable()
+                                    .frame(height:300)
+                                    
+                        }
+                                
+                                
+                            })
+                    
+                    }.onAppear() {
+                        searchObjectController.search()
+                    }
+            } else {
+                Text("Choose a Topic on the Home Page to get started")
+                    .fontWeight(.bold)
+                    .padding(6)
             }
+        
         
                 
                 
-            }
+        }.navigationBarTitle("MoodBoard")
+        
+    }
             
         
 }

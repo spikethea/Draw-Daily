@@ -9,13 +9,23 @@ import SwiftUI
 import CoreData
 
 
+
+class AppSettings: ObservableObject {
+    @Published var drawing = 0
+    @Published var difficulty = 0
+    @Published var tip = 0
+    
+    @Published var started = false
+}
+
+
 @main
 struct Draw_DailyApp: App {
     
     let persistenceController = PersistenceController.shared
     @Environment(\.scenePhase) var scenePhase
 
-    
+    @StateObject var settings = AppSettings()
     
     @State var showOrderSheet = false
     
@@ -29,6 +39,7 @@ struct Draw_DailyApp: App {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(self.searchObjectController)
+                .environmentObject(settings)
         }
         .onChange(of: scenePhase) { _ in
             persistenceController.save()

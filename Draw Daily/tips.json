@@ -9,12 +9,66 @@
         ]
     },
     {
-        "typename": "crosshatching",
+        "typename": "simple hatching",
         "id": 1,
+        "title": "How to do hatching technique",
+        "steps": [
+        "First, find where where less light would be",
+        "find the darkest point, shading lines from there",
+        "draw your lines parralel to the direction you shade",
+        "as you get further away, use less pressure",
+        ]
+    },
+    {
+        "typename": "crosshatching",
+        "id": 2,
         "title": "How to cross-hatching",
         "steps": [
-        "First, find where you could imagine where less kight is",
-        "find the darkest corner, and start sketching diagonal lines from there",
+        "First, find where you could imagine where less light is",
+        "find the darkest point, shading lines from there",
+        "draw your lines parralel to the direction you shade",
+        "as you get further away, use less pressure",
+        "this time, once you finish, draw another set of lines",
+        "these lines should blend in with the first",
+        ]
+    },
+    {
+        "typename": "outlines",
+        "id": 3,
+        "title": "How to draw outlines perfectly",
+        "steps": [
+        "To draw outlines perfectly, you need to be steady and deliberate",
+        "first of all, make a light sketch of your planned outline",
+        "PS: pencil must be sharpened!",
+        "now carefully, draw small, deliberate lines",
+        ]
+    },
+    {
+        "typename": "perspective",
+        "id": 4,
+        "title": "How to draw 1 point perspective",
+        "steps": [
+        "sketch a horizontal line. This will represent eye level",
+        "sketch a point on the line, as vanishing point in your 3D scene",
+        "sketch a diagonal line the across vanishing point in the horizontal line",
+        "draw another diagonal line, flipped, so that it makes an X on the point",
+        "Use this diagram as guidance for 3D scenes.",
+        "the closer objects are to vanishing point, the further they are",
+        ]
+    },
+    {
+        "typename": "highlights",
+        "id": 5,
+        "title": "How to draw highlights",
+        "steps": [
+        "To draw highlights, you need to shade your drawing first",
+        "find the area where your light point(s) come from",
+        "idenfify the direction your light is in",
+        "PS: if youd like, you can draw a icon with a directional arrow ",
+        "now, imagine your drawing as a 3D object with perspective",
+        "(this part is hard)",
+        "combine the distance and direction, erasing the strongest light points ",
+        "the shinier an object is, the more highlighting it needs",
         ]
     },
 ]

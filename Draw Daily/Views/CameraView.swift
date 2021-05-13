@@ -20,6 +20,7 @@ class ImageSaver: NSObject {
 
 struct CameraView: View {
     
+    @EnvironmentObject var settings: AppSettings
     @Environment(\.managedObjectContext) private var viewContext
 
     @State private var showSheet: Bool = false
@@ -28,40 +29,47 @@ struct CameraView: View {
     
     @State private var image: UIImage?
     
+    
     var body: some View {
         ZStack {
             
             VStack{
-                Button(action: saveImage, label: {
-                    Text("Save Image")
-                }).foregroundColor(.black)
-                Image(uiImage: image ?? UIImage(named: "placeholder")!)
-                    .resizable()
-                    .frame(width:300, height: 300)
+                Button(action: {self.showSheet = true}, label: {
+                    Image(uiImage: image ?? UIImage(named: "placeholder")!)
+                        .resizable()
+                        .frame(width:300, height: 300)
+                })
                 
-                Button("Choose Picture") {
-                    self.showSheet = true
+                if (image != nil) {// check to see if the image is present, other
+                    Button(action: {saveImage()}) {
+                        Text("Save Image")
+                            .foregroundColor(Color.white)
+                            .padding(20)
+                            .background(Color.BackgroundColor)
+                            .cornerRadius(10)
+                    }
+                    .padding(25)
                     
-                }.foregroundColor(.black)
-                .padding()
-                .actionSheet(isPresented: $showSheet) {
-                    ActionSheet(title: Text("Select Photo"),
-                        message: Text("Choose"),
-                        buttons:[
-                            .default(Text("Photo Library")) {
-                                self.showImagePicker = true
-                                self.sourceType = .photoLibrary
-                            },
-                            .default(Text("Camera")) {
-                                self.showImagePicker = true
-                                self.sourceType = .camera
-                            },
-                            .cancel()
-                        ]
-                    )
                 }
                 
-            }.sheet(isPresented: $showImagePicker, onDismiss: loadImage){
+                
+            }.actionSheet(isPresented: $showSheet) {
+                ActionSheet(title: Text("Select Photo"),
+                    message: Text("Choose"),
+                    buttons:[
+                        .default(Text("Photo Library")) {
+                            self.showImagePicker = true
+                            self.sourceType = .photoLibrary
+                        },
+                        .default(Text("Camera")) {
+                            self.showImagePicker = true
+                            self.sourceType = .camera
+                        },
+                        .cancel()
+                    ]
+                )
+            }
+            .sheet(isPresented: $showImagePicker, onDismiss: loadImage){
                 ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
             }
             
@@ -72,20 +80,19 @@ struct CameraView: View {
         
     }
     
-    
+    // This function receives the captured image, and compresses the UIImage Data into a storable JPEG Format and saves it.
+    // Using external storage, a reference is made of the image to save memory and improve performance of the application
     func saveImage () {
         print("saving to jpegData")
         
-        //guard let savingImage = image else {return}
-        //let imageSaver = ImageSaver()
-        //imageSaver.writeToPhotoAlbum(image: savingImage)
+        
         let pickedImage = image?.jpegData(compressionQuality: 1.0)
         let drawing  = Drawing(context: viewContext)
         
         //Get Current Date
         let date = Date()
         let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        format.dateFormat = "dd-MM-yyyy HH:mm"
         let formattedDate = format.string(from: date)
         
         drawing.img = pickedImage
@@ -95,6 +102,7 @@ struct CameraView: View {
         do {
         try viewContext.save()
         print("Image is saved")
+        settings.started.self = false
         } catch {
         print(error.localizedDescription)
 

@@ -12,7 +12,7 @@ class SearchObjectController : ObservableObject {
     
     var token = "gQR-YsX0OpwkYpbjhPVi3b4kSR-DtWrR5phwDm2kPMM"
     @Published var results = [Result]()
-    @Published var searchText : String = "whales"
+    @Published var searchText : String = "anime"
     
     func search () {
         let url = URL(string: "https://api.unsplash.com/search/photos?query=\(searchText)")

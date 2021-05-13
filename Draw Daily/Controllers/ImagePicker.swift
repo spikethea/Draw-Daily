@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+
+//Hack with Swift
 class ImagePickerCoordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @Binding var image: UIImage?
